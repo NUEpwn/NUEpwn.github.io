@@ -22,3 +22,7 @@ Der Discord-Invite steht absichtlich **nicht** auf der Seite (Schutz vor Bots). 
 ## Farben
 
 Dark: Hintergrund `#0d1117`, Schrift `#e6edf3`, Akzent `#3ddc84` (aus dem Logo). Light: Hintergrund `#f6f8fa`, Schrift `#1f2328`, Akzent `#1a7f37`. Definiert als CSS-Variablen oben in `style.css`.
+
+## Cache
+
+GitHub Pages lässt Browser Dateien ca. 10 Minuten cachen. Wenn sich `main.js` oder `style.css` ändern, in `index.html` die Version hochzählen (`main.js?v=2` → `?v=3`), sonst kann eine neue `index.html` mit einer alten `main.js` zusammenkommen.
