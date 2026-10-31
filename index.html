@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NUEpwn – CTF-Team aus Nürnberg</title>
+<meta name="description" content="NUEpwn ist ein offenes CTF-Team aus Nürnberg. Wir spielen regelmäßig Capture-the-Flag-Wettbewerbe und lernen gemeinsam. Alle Skill-Level willkommen.">
+<meta name="theme-color" content="#0d1117">
+<meta property="og:title" content="NUEpwn – CTF-Team aus Nürnberg">
+<meta property="og:description" content="Offenes CTF-Team aus Nürnberg. Alle Skill-Level willkommen.">
+<meta property="og:image" content="assets/nuepwn-logo.png">
+<link rel="icon" type="image/svg+xml" href="assets/nuepwn-icon.svg">
+<link rel="apple-touch-icon" href="assets/nuepwn-icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<script>
+  // Theme vor dem ersten Rendern setzen (Standard: dark)
+  (function () {
+    var t = "dark";
+    try { t = localStorage.getItem("nuepwn-theme") || "dark"; } catch (e) {}
+    document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#" aria-label="NUEpwn Startseite">
+      <span class="brand-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <g class="lg-fg" shape-rendering="crispEdges"><rect x="170" y="90" width="20" height="20"/><rect x="150" y="110" width="20" height="20"/><rect x="190" y="110" width="20" height="20"/><rect x="130" y="130" width="20" height="20"/><rect x="210" y="130" width="20" height="20"/><rect x="110" y="150" width="20" height="20"/><rect x="230" y="150" width="20" height="20"/><rect x="110" y="170" width="20" height="20"/><rect x="230" y="170" width="20" height="20"/><rect x="110" y="190" width="20" height="20"/><rect x="230" y="190" width="20" height="20"/><rect x="110" y="210" width="20" height="20"/><rect x="230" y="210" width="20" height="20"/><rect x="110" y="230" width="20" height="20"/><rect x="230" y="230" width="20" height="20"/><rect x="110" y="250" width="20" height="20"/><rect x="230" y="250" width="20" height="20"/><rect x="110" y="270" width="20" height="20"/><rect x="230" y="270" width="20" height="20"/><rect x="110" y="290" width="20" height="20"/><rect x="230" y="290" width="20" height="20"/><rect x="50" y="310" width="20" height="20"/><rect x="70" y="310" width="20" height="20"/><rect x="90" y="310" width="20" height="20"/><rect x="110" y="310" width="20" height="20"/><rect x="130" y="310" width="20" height="20"/><rect x="150" y="310" width="20" height="20"/><rect x="170" y="310" width="20" height="20"/><rect x="190" y="310" width="20" height="20"/><rect x="210" y="310" width="20" height="20"/><rect x="230" y="310" width="20" height="20"/><rect x="250" y="310" width="20" height="20"/><rect x="270" y="310" width="20" height="20"/><rect x="290" y="310" width="20" height="20"/></g><g class="lg-ac" shape-rendering="crispEdges"><rect x="170" y="30" width="20" height="20"/><rect x="190" y="30" width="20" height="20"/><rect x="210" y="30" width="20" height="20"/><rect x="230" y="30" width="20" height="20"/><rect x="170" y="50" width="20" height="20"/><rect x="190" y="50" width="20" height="20"/><rect x="210" y="50" width="20" height="20"/><rect x="170" y="70" width="20" height="20"/><rect x="150" y="230" width="20" height="20"/><rect x="170" y="250" width="20" height="20"/><rect x="150" y="270" width="20" height="20"/></g>
+</svg></span>
+      <span class="brand-text">NUEpwn<span class="cur">_</span></span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#about">~/about</a>
+      <a href="#ziele">~/ziele</a>
+      <a href="#willkommen">~/wer</a>
+      <a href="#faq">~/faq</a>
+      <a href="#mitmachen" class="nav-cta">~/join</a>
+    </nav>
+    <button class="theme" id="theme-toggle" type="button" aria-label="Zwischen Dark und Light Mode wechseln">
+      <span class="theme-label">[ <span id="theme-name">dark</span> ]</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-logo" role="img" aria-label="NUEpwn Logo: Pixelburg mit grüner Flagge und Terminal-Prompt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360">
+  <g class="lg-fg" shape-rendering="crispEdges"><rect x="348" y="72" width="12" height="12"/><rect x="348" y="84" width="12" height="12"/><rect x="336" y="96" width="12" height="12"/><rect x="360" y="96" width="12" height="12"/><rect x="324" y="108" width="12" height="12"/><rect x="372" y="108" width="12" height="12"/><rect x="324" y="120" width="12" height="12"/><rect x="372" y="120" width="12" height="12"/><rect x="324" y="132" width="12" height="12"/><rect x="372" y="132" width="12" height="12"/><rect x="204" y="144" width="12" height="12"/><rect x="228" y="144" width="12" height="12"/><rect x="252" y="144" width="12" height="12"/><rect x="276" y="144" width="12" height="12"/><rect x="324" y="144" width="12" height="12"/><rect x="372" y="144" width="12" height="12"/><rect x="204" y="156" width="12" height="12"/><rect x="216" y="156" width="12" height="12"/><rect x="228" y="156" width="12" height="12"/><rect x="240" y="156" width="12" height="12"/><rect x="252" y="156" width="12" height="12"/><rect x="264" y="156" width="12" height="12"/><rect x="276" y="156" width="12" height="12"/><rect x="324" y="156" width="12" height="12"/><rect x="372" y="156" width="12" height="12"/><rect x="444" y="156" width="12" height="12"/><rect x="204" y="168" width="12" height="12"/><rect x="276" y="168" width="12" height="12"/><rect x="324" y="168" width="12" height="12"/><rect x="372" y="168" width="12" height="12"/><rect x="432" y="168" width="12" height="12"/><rect x="456" y="168" width="12" height="12"/><rect x="204" y="180" width="12" height="12"/><rect x="276" y="180" width="12" height="12"/><rect x="288" y="180" width="12" height="12"/><rect x="300" y="180" width="12" height="12"/><rect x="312" y="180" width="12" height="12"/><rect x="324" y="180" width="12" height="12"/><rect x="372" y="180" width="12" height="12"/><rect x="384" y="180" width="12" height="12"/><rect x="396" y="180" width="12" height="12"/><rect x="408" y="180" width="12" height="12"/><rect x="420" y="180" width="12" height="12"/><rect x="468" y="180" width="12" height="12"/><rect x="204" y="192" width="12" height="12"/><rect x="468" y="192" width="12" height="12"/><rect x="204" y="204" width="12" height="12"/><rect x="468" y="204" width="12" height="12"/><rect x="108" y="216" width="12" height="12"/><rect x="120" y="216" width="12" height="12"/><rect x="132" y="216" width="12" height="12"/><rect x="144" y="216" width="12" height="12"/><rect x="156" y="216" width="12" height="12"/><rect x="168" y="216" width="12" height="12"/><rect x="180" y="216" width="12" height="12"/><rect x="192" y="216" width="12" height="12"/><rect x="204" y="216" width="12" height="12"/><rect x="468" y="216" width="12" height="12"/><rect x="480" y="216" width="12" height="12"/><rect x="492" y="216" width="12" height="12"/><rect x="504" y="216" width="12" height="12"/><rect x="516" y="216" width="12" height="12"/><rect x="528" y="216" width="12" height="12"/></g><g class="lg-ac" shape-rendering="crispEdges"><rect x="348" y="48" width="12" height="12"/><rect x="360" y="48" width="12" height="12"/><rect x="372" y="48" width="12" height="12"/><rect x="384" y="48" width="12" height="12"/><rect x="348" y="60" width="12" height="12"/><rect x="360" y="60" width="12" height="12"/><rect x="372" y="60" width="12" height="12"/><rect x="60" y="192" width="12" height="12"/><rect x="72" y="204" width="12" height="12"/><rect x="84" y="216" width="12" height="12"/><rect x="72" y="228" width="12" height="12"/><rect x="60" y="240" width="12" height="12"/></g>
+  <path class="lg-fg" d="M61.312 316.0V282.42H68.35L77.688 309.56Q77.55 308.088 77.412 306.087Q77.274 304.086 77.15899999999999 302.016Q77.044 299.946 77.044 298.336V282.42H82.288V316.0H75.25L66.004 288.86Q66.096 290.194 66.23400000000001 292.08000000000004Q66.372 293.966 66.464 295.944Q66.556 297.922 66.556 299.578V316.0Z M101.39999999999999 316.46Q96.478 316.46 93.695 313.769Q90.91199999999999 311.078 90.91199999999999 306.432V282.42H96.708V306.386Q96.708 308.778 97.904 310.112Q99.1 311.446 101.39999999999999 311.446Q103.654 311.446 104.87299999999999 310.112Q106.092 308.778 106.092 306.386V282.42H111.88799999999999V306.432Q111.88799999999999 311.078 109.12799999999999 313.769Q106.368 316.46 101.39999999999999 316.46Z M121.24799999999999 316.0V282.42H141.396V287.48H126.90599999999999V296.22H139.786V301.096H126.90599999999999V310.94H141.396V316.0Z M150.34199999999998 324.28V290.7H155.95399999999998V295.346Q156.64399999999998 292.954 158.438 291.597Q160.23199999999997 290.24 162.89999999999998 290.24Q165.338 290.24 167.201 291.43600000000004Q169.064 292.632 170.099 294.817Q171.134 297.002 171.134 299.9V306.754Q171.134 311.124 168.88 313.79200000000003Q166.62599999999998 316.46 162.89999999999998 316.46Q160.23199999999997 316.46 158.41499999999996 315.08Q156.59799999999998 313.7 155.908 311.216L156.09199999999998 317.196V324.28ZM160.73799999999997 311.492Q162.94599999999997 311.492 164.16499999999996 310.29600000000005Q165.384 309.1 165.384 306.616V300.084Q165.384 297.6 164.16499999999996 296.404Q162.94599999999997 295.208 160.73799999999997 295.208Q158.52999999999997 295.208 157.31099999999998 296.54200000000003Q156.09199999999998 297.876 156.09199999999998 300.314V306.386Q156.09199999999998 308.824 157.31099999999998 310.158Q158.52999999999997 311.492 160.73799999999997 311.492Z M181.09199999999998 316.0 177.13599999999997 290.7H181.68999999999997L183.944 306.202Q184.128 307.628 184.26599999999996 309.284Q184.40399999999997 310.94 184.49599999999998 312.044Q184.54199999999997 310.94 184.67999999999998 309.284Q184.81799999999998 307.628 185.09399999999997 306.202L187.85399999999998 290.7H192.63799999999998L195.30599999999998 306.202Q195.58199999999997 307.628 195.74299999999997 309.307Q195.90399999999997 310.986 195.99599999999998 312.09Q196.08799999999997 310.986 196.20299999999997 309.307Q196.31799999999998 307.628 196.54799999999997 306.202L198.84799999999998 290.7H203.26399999999998L199.21599999999998 316.0H193.28199999999998L190.89 300.406Q190.65999999999997 299.118 190.47599999999997 297.43899999999996Q190.29199999999997 295.76 190.2 294.702Q190.15399999999997 295.76 189.92399999999998 297.43899999999996Q189.694 299.118 189.51 300.406L187.02599999999998 316.0Z M209.54199999999997 316.0V290.7H215.15399999999997V295.438Q215.61399999999998 293.046 217.40799999999996 291.64300000000003Q219.20199999999997 290.24 221.96199999999996 290.24Q225.68799999999996 290.24 227.91899999999998 292.72400000000005Q230.14999999999998 295.208 230.14999999999998 299.394V316.0H224.39999999999998V300.084Q224.39999999999998 297.738 223.18099999999998 296.473Q221.96199999999996 295.208 219.89199999999997 295.208Q217.72999999999996 295.208 216.51099999999997 296.496Q215.29199999999997 297.784 215.29199999999997 300.176V316.0Z"/>
+  <path class="lg-ac" d="M238.35999999999996 322.348V317.15H260.43999999999994V322.348Z"/>
+</svg></div>
+
+    <div class="term" aria-label="Terminal">
+      <div class="term-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="term-title">nuepwn@nbg: ~</span>
+      </div>
+      <div class="term-body">
+        <p class="line"><span class="ps1">nuepwn@nbg:~$</span> <span class="typed" data-text="./nuepwn --info"></span><span class="caret" aria-hidden="true"></span></p>
+        <div class="out" id="hero-out">
+          <p class="lead">Wir sind ein offenes <strong>CTF-Team aus Nürnberg</strong>. Wir hacken gemeinsam, lernen voneinander und spielen regelmäßig bei Capture-the-Flag-Wettbewerben mit.</p>
+          <p class="ok">[+] Alle Skill-Level willkommen, vom ersten <code>ls</code> bis zum Heap-Exploit.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#mitmachen">&gt; mitmachen</a>
+            <a class="btn" href="#about">&gt; mehr erfahren</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> whoami</h2>
+    <div class="grid two">
+      <div>
+        <p>NUEpwn ist eine Gruppe von Leuten aus Nürnberg und Umgebung, die Spaß an IT-Sicherheit haben. Bei <strong>CTFs</strong> (Capture the Flag) lösen Teams Hacking-Aufgaben, um versteckte „Flags“ zu finden: Webseiten knacken, Binaries reversen, Kryptografie brechen, Spuren in Speicherabbildern suchen.</p>
+        <p>Wir spielen online bei internationalen CTFs mit, treffen uns aber auch gerne vor Ort in Nürnberg. Nach jedem Event schreiben wir Writeups, damit alle etwas davon haben, auch wer gerade nicht dabei war.</p>
+      </div>
+      <pre class="card ascii" aria-hidden="true"><span class="c-muted"># team.conf</span>
+<span class="c-key">name</span>     = <span class="c-str">"NUEpwn"</span>
+<span class="c-key">standort</span> = <span class="c-str">"Nürnberg"</span>
+<span class="c-key">seit</span>     = <span class="c-num">2026</span>
+<span class="c-key">level</span>    = [<span class="c-str">"anfänger"</span>, <span class="c-str">"fortgeschritten"</span>, <span class="c-str">"pro"</span>]
+<span class="c-key">status</span>   = <span class="c-str">"verein in vorbereitung"</span>
+<span class="c-key">motto</span>    = <span class="c-str">"hack. learn. share."</span></pre>
+    </div>
+  </section>
+
+  <!-- ZIELE -->
+  <section id="ziele" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> cat ziele.txt</h2>
+    <ol class="goals">
+      <li>
+        <span class="num">01</span>
+        <div><h3>Regelmäßig CTFs spielen</h3><p>Wir suchen uns Events auf CTFtime aus und spielen sie gemeinsam, egal ob Einsteiger-CTF oder große internationale Wettbewerbe.</p></div>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <div><h3>Voneinander lernen</h3><p>Pair-Hacking, Writeups, kleine Workshops. Wer etwas kann, zeigt es den anderen. Wer etwas nicht kann, fragt einfach.</p></div>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <div><h3>Community in Nürnberg aufbauen</h3><p>Ein Ort für alle in der Region, die sich für Security interessieren: Studierende, Azubis, Berufstätige und Hobby-Hacker.</p></div>
+      </li>
+      <li>
+        <span class="num">04</span>
+        <div><h3>Verein gründen</h3><p>Langfristig wollen wir ein eingetragener Verein werden, um Räume, Infrastruktur und eigene Events auf feste Beine zu stellen. Daran arbeiten wir gerade.</p></div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- KATEGORIEN -->
+  <section id="kategorien" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> ls -la kategorien/</h2>
+    <div class="cats">
+      <div class="cat"><span class="perm">drwxr-xr-x</span> <b>web/</b><span>XSS, SQLi, SSRF und alles, was im Browser kaputtgeht</span></div>
+      <div class="cat"><span class="perm">drwxr-xr-x</span> <b>pwn/</b><span>Buffer Overflows, ROP, Heap: Programme dazu bringen, was sie nicht sollen</span></div>
+      <div class="cat"><span class="perm">drwxr-xr-x</span> <b>crypto/</b><span>Schwache Schlüssel, kaputte Protokolle, Mathe mit Spaßfaktor</span></div>
+      <div class="cat"><span class="perm">drwxr-xr-x</span> <b>rev/</b><span>Binaries auseinandernehmen und verstehen, was sie tun</span></div>
+      <div class="cat"><span class="perm">drwxr-xr-x</span> <b>forensics/</b><span>Spuren in Dateien, Netzwerkmitschnitten und Speicherabbildern finden</span></div>
+      <div class="cat"><span class="perm">drwxr-xr-x</span> <b>osint/</b><span>Mit offenen Quellen Menschen, Orte und Infos aufspüren</span></div>
+      <div class="cat"><span class="perm">drwxr-xr-x</span> <b>misc/</b><span>Alles, was nirgends reinpasst, und oft das Lustigste</span></div>
+      <div class="cat"><span class="perm">drwxr-xr-x</span> <b>hardware/</b><span>Mikrocontroller, Funk und Signale</span></div>
+    </div>
+  </section>
+
+  <!-- WILLKOMMEN -->
+  <section id="willkommen" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> sudo -l <span class="c-muted"># wer darf mitmachen?</span></h2>
+    <p class="big"><span class="c-acc">(ALL) NOPASSWD: ALL</span> &nbsp;Alle sind willkommen. Wirklich alle.</p>
+    <div class="grid three">
+      <div class="card">
+        <p class="tag">[ level 0 ]</p>
+        <h3>Noch nie ein CTF gespielt?</h3>
+        <p>Perfekt. Du brauchst kein Vorwissen, nur Neugier. Wir zeigen dir die Tools, erklären die Grundlagen und lösen die ersten Aufgaben gemeinsam mit dir.</p>
+      </div>
+      <div class="card">
+        <p class="tag">[ level 1 ]</p>
+        <h3>Schon ein paar Flags gesammelt?</h3>
+        <p>Dann spiel mit uns die nächsten Events, spezialisier dich auf eine Kategorie und teil dein Wissen in Writeups.</p>
+      </div>
+      <div class="card">
+        <p class="tag">[ level 1337 ]</p>
+        <h3>Alter Hase?</h3>
+        <p>Großartig. Hilf uns, schwierige Challenges zu knacken, und nimm Neue mit. Erklären ist die beste Art, selbst noch besser zu werden.</p>
+      </div>
+    </div>
+
+    <h3 class="sub"><span class="c-acc">#</span> Unsere Regeln</h3>
+    <ul class="rules">
+      <li><span class="c-acc">[+]</span> Es gibt keine dummen Fragen. Jede:r hat mal angefangen.</li>
+      <li><span class="c-acc">[+]</span> Respektvoller Umgang, egal wer du bist, woher du kommst oder was du kannst.</li>
+      <li><span class="c-acc">[+]</span> Wir hacken nur, was wir dürfen: CTF-Infrastruktur und eigene Testsysteme.</li>
+      <li><span class="c-acc">[+]</span> Während eines laufenden CTFs werden keine Lösungen nach außen geteilt.</li>
+    </ul>
+  </section>
+
+  <!-- ABLAUF -->
+  <section id="ablauf" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> ./ablauf.sh</h2>
+    <div class="steps">
+      <div class="step"><span class="c-muted">[1/4]</span> <b>Event wählen</b><p>Im Discord schauen wir auf CTFtime, welche CTFs anstehen, und stimmen ab.</p></div>
+      <div class="step"><span class="c-muted">[2/4]</span> <b>Anmelden</b><p>Wer Zeit hat, ist dabei. Ein ganzes Wochenende ist kein Muss, auch eine Stunde hilft.</p></div>
+      <div class="step"><span class="c-muted">[3/4]</span> <b>Gemeinsam hacken</b><p>Online im Discord oder zusammen vor Ort in Nürnberg. Aufgaben werden aufgeteilt, Fortschritt geteilt.</p></div>
+      <div class="step"><span class="c-muted">[4/4]</span> <b>Writeups</b><p>Nach dem Event schreiben wir auf, wie wir die Challenges gelöst haben, und lernen daraus.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> man nuepwn</h2>
+    <div class="faq">
+      <details>
+        <summary>Was ist ein CTF?</summary>
+        <p>Ein Capture-the-Flag ist ein Wettbewerb für IT-Sicherheit. Die Veranstalter bauen absichtlich verwundbare Programme, Webseiten oder Rätsel. Wer die Schwachstelle findet, bekommt eine „Flag“ (eine Zeichenkette wie <code>flag{...}</code>) und dafür Punkte. Die meisten CTFs laufen online über ein Wochenende.</p>
+      </details>
+      <details>
+        <summary>Was muss ich mitbringen?</summary>
+        <p>Einen Laptop, Neugier und etwas Zeit. Linux-Kenntnisse helfen, sind aber kein Muss. Den Rest lernst du beim Spielen.</p>
+      </details>
+      <details>
+        <summary>Kostet das etwas?</summary>
+        <p>Nein. Die meisten CTFs sind kostenlos, und bei uns mitzumachen auch. Wenn es später einen Verein gibt, wird es dort eine Mitgliedschaft geben, aber mitspielen bleibt offen.</p>
+      </details>
+      <details>
+        <summary>Muss ich in Nürnberg wohnen?</summary>
+        <p>Nein. Wir spielen vor allem online. Unser Herz schlägt aber in Nürnberg, und Treffen vor Ort sind hier am einfachsten.</p>
+      </details>
+      <details>
+        <summary>Ist das legal?</summary>
+        <p>Ja. Bei CTFs greifen wir ausschließlich Systeme an, die genau dafür gebaut wurden und für die wir die Erlaubnis haben. Echte Systeme ohne Erlaubnis anzugreifen ist tabu.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- MITMACHEN -->
+  <section id="mitmachen" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> ./join.sh</h2>
+    <div class="term join">
+      <div class="term-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="term-title">join.sh</span>
+      </div>
+      <div class="term-body">
+        <p class="c-muted"># Komm vorbei, sag Hallo, spiel mit.</p>
+        <ul class="links">
+          <!-- TODO: Discord-Einladungslink eintragen -->
+          <li><a class="link" href="#" data-todo="discord"><span class="c-acc">&gt;</span> discord <span class="c-muted">Chat, Planung und gemeinsames Spielen</span></a></li>
+          <li><a class="link" href="https://ctftime.org/team/453738" rel="noopener"><span class="c-acc">&gt;</span> ctftime <span class="c-muted">Unsere Platzierungen und kommende Events</span></a></li>
+          <li><a class="link" href="https://github.com/NUEpwn" rel="noopener"><span class="c-acc">&gt;</span> github <span class="c-muted">Writeups, Tools und Code</span></a></li>
+        </ul>
+        <p class="line"><span class="ps1">nuepwn@nbg:~$</span> <span class="caret blink" aria-hidden="true"></span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span>NUEpwn<span class="c-acc">_</span> · CTF-Team aus Nürnberg · Verein in Vorbereitung</span>
+    <span class="c-muted">exit 0</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
