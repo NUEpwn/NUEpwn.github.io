@@ -11,9 +11,13 @@ python3 -m http.server 8000
 # dann http://localhost:8000 öffnen
 ```
 
-## Platzhalter
+## Kommende CTFs
 
-Im Abschnitt `./join.sh` in `index.html` sind die Links mit `data-todo` markiert (Discord, CTFtime). URL in `href` eintragen und das Attribut `data-todo` entfernen, dann verschwindet der Hinweis „(link folgt)“.
+Der Abschnitt `ctftime --upcoming` liest `data/ctfs.json`. Die Datei schreibt `scripts/update_ctfs.py`, das die [CTFtime-API](https://ctftime.org/api/) abfragt (nächste 30 Tage, max. 25 Events). Die GitHub Action `.github/workflows/update-ctfs.yml` läuft täglich und committet Änderungen; per „Run workflow“ im Actions-Tab lässt sie sich auch von Hand starten. Direkt aus dem Browser geht das nicht, weil CTFtime keine CORS-Header schickt.
+
+## Kontakt / Discord
+
+Der Discord-Invite steht absichtlich **nicht** auf der Seite (Schutz vor Bots). Stattdessen gibt es einen Kontakt-Link in `./join.sh`: Beim Element `id="contact"` in `index.html` Benutzername in `data-u` und Domain in `data-d` eintragen und `data-todo` entfernen. Die Adresse wird erst im Browser per JS zusammengesetzt und steht so nicht im Klartext im HTML.
 
 ## Farben
 
