@@ -22,7 +22,7 @@
     document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
   })();
 </script>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -292,6 +292,15 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js?v=2"></script>
+<script>
+  // Fallback, falls die Events nicht laden (z. B. alte main.js im Browser-Cache)
+  setTimeout(function () {
+    var l = document.getElementById("ctf-list");
+    if (l && l.textContent.indexOf("lade Events") !== -1) {
+      l.innerHTML = '<p class="c-muted">[-] Events konnten nicht geladen werden. Seite neu laden oder <a href="https://ctftime.org/event/list/upcoming" rel="noopener">direkt auf CTFtime ansehen</a>.</p>';
+    }
+  }, 8000);
+</script>
 </body>
 </html>

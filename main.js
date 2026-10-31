@@ -104,7 +104,13 @@
         if (start <= now && end > now) tags.appendChild(badge("läuft", "live"));
         else if (start - now < 3 * 864e5) tags.appendChild(badge("bald", "soon"));
         if (e.format) tags.appendChild(badge(e.format.toLowerCase()));
-        tags.appendChild(badge(e.onsite ? "vor ort" + (e.location ? ": " + e.location : "") : "online"));
+        if (e.onsite) {
+          // lange Adressen auf Stadt/Land kürzen, voller Ort im Tooltip
+          var loc = (e.location || "").split(",").map(function (x) { return x.trim(); }).filter(Boolean);
+          var b = badge("vor ort" + (loc.length ? ": " + loc.slice(-2).join(", ") : ""));
+          if (e.location) b.title = e.location;
+          tags.appendChild(b);
+        } else tags.appendChild(badge("online"));
         if (e.restrictions && e.restrictions !== "Open") tags.appendChild(badge(e.restrictions.toLowerCase(), "warn"));
         tags.appendChild(badge("weight " + (e.weight ? Number(e.weight).toFixed(1) : "–")));
         row.appendChild(tags);
