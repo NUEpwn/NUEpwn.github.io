@@ -40,6 +40,8 @@
       <a href="#about">~/about</a>
       <a href="#ziele">~/ziele</a>
       <a href="#willkommen">~/wer</a>
+      <a href="#ctfs">~/ctfs</a>
+      <a href="#einstieg">~/lernen</a>
       <a href="#faq">~/faq</a>
       <a href="#mitmachen" class="nav-cta">~/join</a>
     </nav>
@@ -169,10 +171,66 @@
   <section id="ablauf" class="sec wrap">
     <h2 class="cmd"><span class="ps1">$</span> ./ablauf.sh</h2>
     <div class="steps">
-      <div class="step"><span class="c-muted">[1/4]</span> <b>Event wählen</b><p>Im Discord schauen wir auf CTFtime, welche CTFs anstehen, und stimmen ab.</p></div>
+      <div class="step"><span class="c-muted">[1/4]</span> <b>Event wählen</b><p>Im Discord schauen wir auf <a href="#ctfs">CTFtime</a>, welche CTFs anstehen, und stimmen ab.</p></div>
       <div class="step"><span class="c-muted">[2/4]</span> <b>Anmelden</b><p>Wer Zeit hat, ist dabei. Ein ganzes Wochenende ist kein Muss, auch eine Stunde hilft.</p></div>
       <div class="step"><span class="c-muted">[3/4]</span> <b>Gemeinsam hacken</b><p>Online im Discord oder zusammen vor Ort in Nürnberg. Aufgaben werden aufgeteilt, Fortschritt geteilt.</p></div>
       <div class="step"><span class="c-muted">[4/4]</span> <b>Writeups</b><p>Nach dem Event schreiben wir auf, wie wir die Challenges gelöst haben, und lernen daraus.</p></div>
+    </div>
+  </section>
+
+  <!-- KOMMENDE CTFS (Daten: data/ctfs.json, täglich per GitHub Action von CTFtime) -->
+  <section id="ctfs" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> ctftime --upcoming <span class="c-muted"># was steht an?</span></h2>
+    <p class="intro">Die nächsten CTFs von <a href="https://ctftime.org/event/list/upcoming" rel="noopener">CTFtime</a>. Welche wir davon spielen, stimmen wir im Discord ab. Zeiten in deutscher Zeit.</p>
+    <div class="term ctf-term">
+      <div class="term-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="term-title">upcoming.log</span>
+      </div>
+      <div class="term-body">
+        <div id="ctf-list" class="ctf-list" aria-live="polite">
+          <p class="c-muted">[*] lade Events ...</p>
+        </div>
+        <p class="ctf-meta c-muted" id="ctf-meta"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EINSTIEG -->
+  <section id="einstieg" class="sec wrap">
+    <h2 class="cmd"><span class="ps1">$</span> cat einstieg.md <span class="c-muted"># selbst üben</span></h2>
+    <p class="intro">Du willst schon vor dem ersten CTF loslegen? Diese Plattformen sind kostenlos und perfekt zum Reinkommen.</p>
+    <div class="grid three res">
+      <a class="card res-card" href="https://overthewire.org/wargames/bandit/" rel="noopener">
+        <p class="tag">[ linux · level 0 ]</p>
+        <h3>OverTheWire Bandit</h3>
+        <p>Der Klassiker für den Start: Level für Level lernst du die Linux-Shell kennen.</p>
+      </a>
+      <a class="card res-card" href="https://picoctf.org/" rel="noopener">
+        <p class="tag">[ alles · level 0 ]</p>
+        <h3>picoCTF</h3>
+        <p>Ein CTF für Einsteiger, dessen Aufgaben das ganze Jahr online bleiben. Von jeder Kategorie etwas.</p>
+      </a>
+      <a class="card res-card" href="https://ctf101.org/" rel="noopener">
+        <p class="tag">[ grundlagen ]</p>
+        <h3>CTF101</h3>
+        <p>Kompaktes Handbuch: Was steckt hinter den Kategorien und welche Techniken braucht man?</p>
+      </a>
+      <a class="card res-card" href="https://portswigger.net/web-security" rel="noopener">
+        <p class="tag">[ web ]</p>
+        <h3>PortSwigger Academy</h3>
+        <p>Die beste kostenlose Schule für Web-Security, mit Erklärungen und Übungslaboren.</p>
+      </a>
+      <a class="card res-card" href="https://cryptohack.org/" rel="noopener">
+        <p class="tag">[ crypto ]</p>
+        <h3>CryptoHack</h3>
+        <p>Kryptografie spielerisch lernen, von XOR bis zu Angriffen auf RSA und elliptische Kurven.</p>
+      </a>
+      <a class="card res-card" href="https://pwn.college/" rel="noopener">
+        <p class="tag">[ pwn · rev ]</p>
+        <h3>pwn.college</h3>
+        <p>Strukturierter Kurs von Shellcode bis Kernel-Exploits, aus der Uni-Lehre entstanden.</p>
+      </a>
     </div>
   </section>
 
@@ -213,9 +271,10 @@
       </div>
       <div class="term-body">
         <p class="c-muted"># Komm vorbei, sag Hallo, spiel mit.</p>
+        <p class="invite"><span class="c-acc">[i]</span> Unser Discord ist <strong>nur auf Einladung</strong>, damit dort keine Bots und Spammer landen. Schreib uns kurz, wer du bist, und du bekommst einen Invite.</p>
         <ul class="links">
-          <!-- TODO: Discord-Einladungslink eintragen -->
-          <li><a class="link" href="#" data-todo="discord"><span class="c-acc">&gt;</span> discord <span class="c-muted">Chat, Planung und gemeinsames Spielen</span></a></li>
+          <!-- Kontakt: Adresse wird per JS aus data-u/data-d zusammengesetzt (Schutz vor Adress-Sammlern). TODO: echte Adresse eintragen, dann data-todo entfernen -->
+          <li><a class="link" id="contact" href="#mitmachen" data-u="" data-d="" data-todo="kontakt"><span class="c-acc">&gt;</span> kontakt <span class="c-muted">Invite für den Discord anfragen</span></a></li>
           <li><a class="link" href="https://ctftime.org/team/453738" rel="noopener"><span class="c-acc">&gt;</span> ctftime <span class="c-muted">Unsere Platzierungen und kommende Events</span></a></li>
           <li><a class="link" href="https://github.com/NUEpwn" rel="noopener"><span class="c-acc">&gt;</span> github <span class="c-muted">Writeups, Tools und Code</span></a></li>
         </ul>
