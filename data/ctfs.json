@@ -1,22 +1,6 @@
 {
- "updated": "2026-11-01T11:51:46+00:00",
+ "updated": "2026-11-02T13:33:03+00:00",
  "events": [
-  {
-   "id": 3460,
-   "title": "HI Cyber Con 2026 CTF",
-   "start": "2026-10-30T14:00:00+00:00",
-   "finish": "2026-11-01T14:00:00+00:00",
-   "ctftime_url": "https://ctftime.org/event/3460/",
-   "url": "https://ctf.hiddeninvestigations.net/",
-   "format": "Jeopardy",
-   "onsite": false,
-   "location": "",
-   "weight": 0,
-   "restrictions": "Open",
-   "organizers": [
-    "HiddenInvestigations"
-   ]
-  },
   {
    "id": 3418,
    "title": "HKCERT CTF 2026 (Qualifying Round)",
