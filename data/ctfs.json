@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T12:49:33+00:00",
+ "updated": "2026-11-04T13:01:51+00:00",
  "events": [
   {
    "id": 3418,
@@ -163,6 +163,22 @@
    ]
   },
   {
+   "id": 3464,
+   "title": "h4ckc0n 2026",
+   "start": "2026-11-14T15:30:00+00:00",
+   "finish": "2026-11-15T15:30:00+00:00",
+   "ctftime_url": "https://ctftime.org/event/3464/",
+   "url": "https://h4ckc0n.in/",
+   "format": "Jeopardy",
+   "onsite": false,
+   "location": "",
+   "weight": 24.23,
+   "restrictions": "Open",
+   "organizers": [
+    "d4rkc0de"
+   ]
+  },
+  {
    "id": 3467,
    "title": "InIt CTF",
    "start": "2026-11-14T15:30:00+00:00",
@@ -320,6 +336,22 @@
    "restrictions": "Academic",
    "organizers": [
     "siberiansecurityleague"
+   ]
+  },
+  {
+   "id": 3386,
+   "title": "BlackHat MEA CTF Final 2026",
+   "start": "2026-12-01T15:14:59+00:00",
+   "finish": "2026-12-03T15:14:59+00:00",
+   "ctftime_url": "https://ctftime.org/event/3386/",
+   "url": "https://blackhatmea.com/capture-the-flag",
+   "format": "Jeopardy",
+   "onsite": true,
+   "location": "Riyadh, Saudi Arabia",
+   "weight": 0,
+   "restrictions": "Prequalified",
+   "organizers": [
+    "SAFCSP"
    ]
   }
  ]
