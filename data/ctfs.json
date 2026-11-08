@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T11:45:06+00:00",
+ "updated": "2026-11-08T11:57:35+00:00",
  "events": [
   {
    "id": 3331,
@@ -31,22 +31,6 @@
    "restrictions": "Open",
    "organizers": [
     "Mirachron"
-   ]
-  },
-  {
-   "id": 3339,
-   "title": "SpookyCTF 2026",
-   "start": "2026-11-06T17:00:00+00:00",
-   "finish": "2026-11-07T17:00:00+00:00",
-   "ctftime_url": "https://ctftime.org/event/3339/",
-   "url": "https://spooky.ctfd.io/",
-   "format": "Jeopardy",
-   "onsite": false,
-   "location": "",
-   "weight": 0,
-   "restrictions": "Open",
-   "organizers": [
-    "NICC"
    ]
   },
   {
