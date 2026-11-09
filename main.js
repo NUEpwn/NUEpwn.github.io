@@ -38,8 +38,11 @@
   if (!a) return;
   var u = a.getAttribute("data-u"), d = a.getAttribute("data-d");
   if (!u || !d) return;
+  var userOk = /^[A-Za-z0-9._%+-]+$/.test(u);
+  var domainOk = /^(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/.test(d);
+  if (!userOk || !domainOk) return;
   var addr = u + "@" + d;
-  a.href = "mailto:" + addr + "?subject=" + encodeURIComponent("Discord-Invite NUEpwn");
+  a.href = "mailto:" + encodeURIComponent(addr) + "?subject=" + encodeURIComponent("Discord-Invite NUEpwn");
   a.removeAttribute("data-todo");
   var hint = a.querySelector(".c-muted");
   if (hint) hint.textContent = addr + " · Invite für den Discord anfragen";
